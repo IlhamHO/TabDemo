@@ -1,9 +1,17 @@
 <resources>
-    <string name="app_name">TabDemo</string>
+    <string name="app_name">Tab Demo</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="lbl_invoer">Voerje tekst in</string>
     <string name="txt_hint_invoer">schrijf  uw tekst</string>
     <string name="btn_spiegel">SPIEGEL</string>
+    <string name="text_pref_username">Please provide a username</string>
+    <string name="txt_mi_settings">Settings</string>
+
+    <string-array name="fruitLijst">
+        <item>Banana</item>
+        <item>Apple</item>
+        <item>Melon</item>
+    </string-array>
 </resources>

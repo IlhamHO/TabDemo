@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import java.util.Random;
 
 import be.ehb.tabdemo.fragments.AgendaFragment;
+import be.ehb.tabdemo.fragments.SettingsFragment;
 import be.ehb.tabdemo.fragments.SpiegelFragment;
 
 public class AgendaTabAdapter extends FragmentPagerAdapter {
@@ -23,6 +24,7 @@ public class AgendaTabAdapter extends FragmentPagerAdapter {
 
             case 0: return "Deze week";
             case 1: return "Spiegel";
+            case 2: return "Settings";
         }
         return "hackerman"/*+position*/;
 
@@ -35,12 +37,13 @@ public class AgendaTabAdapter extends FragmentPagerAdapter {
                 Random random =new Random();
                 return AgendaFragment.newInstance(random.nextInt(20));
             case 1: return SpiegelFragment.newInstance();
+            case 2: return SettingsFragment.newInstance();
         }
         return null;
     }
 
     @Override
     public int getCount() {
-        return 2;
+        return 3;
     }
 }

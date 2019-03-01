@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditTextPreference
+
+        android:key="pref_username"
+        android:selectAllOnFocus="true"
+        android:singleLine="false"
+        android:title="@string/text_pref_username"
+        android:defaultValue="Joske"/>
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="check_box_preference_1"
+        android:title="Check box preference" />
+    <ListPreference
+        android:defaultValue="1"
+        android:entries="@array/fruitLijst"
+        android:entryValues="@array/fruitLijst"
+        android:key="list_preference_1"
+        android:title="List preference" />
+</PreferenceScreen>

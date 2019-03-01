@@ -2,6 +2,7 @@ package be.ehb.tabdemo.fragments;
 
 
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,7 +17,7 @@ import be.ehb.tabdemo.R;
 public class AgendaFragment extends Fragment {
 
     private static final String LUKCKY_KEY = "lucky key";
-    private TextView tvLucky;
+    private TextView tvLucky, tvUsername;
 
 
     public AgendaFragment() {
@@ -40,7 +41,10 @@ public class AgendaFragment extends Fragment {
         View view= inflater.inflate(R.layout.fragment_agenda, container, false);
 
         tvLucky = view.findViewById(R.id.tv_lucky);
+        tvUsername = view.findViewById(R.id.tv_username);
 
+        String name = PreferenceManager.getDefaultSharedPreferences(getActivity()).getString("pref_username","niets");
+        tvUsername.setText("Welcome" + name);
         tvLucky.setText(""+getArguments().getInt(LUKCKY_KEY));
         return view;
 
